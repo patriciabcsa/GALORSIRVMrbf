@@ -1,0 +1,10 @@
+1_20151124_noon_2	s1
+11_20151024_night_label	s2
+3_20151024_noon_label	s3
+4_20151105_noon_label	s4
+4_20151107_noon_label	s5
+5_20141108_noon_label	s6
+5_20151012_night_label	s7
+9_20151017_night_label	s8
+7_20151015_night_label	s9
+14_20151014_night	s10

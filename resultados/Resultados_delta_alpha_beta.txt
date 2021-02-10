@@ -1,0 +1,2 @@
+PERCENTIL:		0.8550135501355014
+ACCURACY:	0.9756394640682094NUMBER:		15INDIVIDUAL:	[0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1]FEATURE:		['Delta_AF3', 'Delta_F3', 'Delta_F7', 'Delta_FC5', 'Delta_O2', 'Alpha_F3', 'Alpha_F7', 'Alpha_T8', 'Beta_AF3', 'Beta_AF4', 'Beta_F3', 'Beta_F7', 'Beta_F8', 'Beta_FC5', 'Beta_T8']

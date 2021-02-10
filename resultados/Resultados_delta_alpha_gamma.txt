@@ -1,0 +1,5 @@
+PERCENTIL:		0.9710564399421129
+ACCURACY:	0.8995127892813642
+NUMBER:		13
+INDIVIDUAL:	[1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0]
+FEATURE:		['Gamma_T8', 'Delta_AF4', 'Delta_P8', 'Alpha_AF4', 'Alpha_F7', 'Alpha_FC5', 'Alpha_O2', 'Alpha_P8', 'Alpha_T8', 'Gamma_AF3', 'Gamma_F7', 'Gamma_F8', 'Gamma_O2']

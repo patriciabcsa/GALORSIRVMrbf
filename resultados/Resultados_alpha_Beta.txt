@@ -1,0 +1,5 @@
+PERCENTIL:		0.8373983739837398
+VALIDATION:	0.9464068209500609
+INDIVIDUAL:	[0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0]
+NUMBER:		13
+FEATURE:		['Alpha_AF3', 'Alpha_F3', 'Alpha_F8', 'Alpha_FC5', 'Alpha_O2', 'Alpha_P8', 'Alpha_T8', 'Beta_AF3', 'Beta_F3', 'Beta_F8', 'Beta_FC5', 'Beta_O2', 'Beta_P8']

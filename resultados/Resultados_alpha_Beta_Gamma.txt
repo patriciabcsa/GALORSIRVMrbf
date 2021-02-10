@@ -1,0 +1,1 @@
+PERCENTIL:		0.6814449917898193VALIDATION:	0.9500609013398295INDIVIDUAL:	[0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0]NUMBER:		15FEATURE:		['Alpha_AF3', 'Alpha_F8', 'Alpha_FC5', 'Alpha_O2', 'Alpha_T8', 'Beta_AF3', 'Beta_F3', 'Beta_F7', 'Beta_F8', 'Beta_P8', 'Beta_T8', 'Gamma_AF3', 'Gamma_F7', 'Gamma_F8', 'Gamma_O2']

@@ -1,0 +1,9 @@
+Acuraccy_Trai:     0.9891900121802679Acuraccy_Test:         0.9866017052375152Con_MatrixC:	    [[800  13]
+ [  9 820]]Clasificacion_Reporte:		              precision    recall  f1-score   support
+
+           0       0.99      0.98      0.99       813
+           1       0.98      0.99      0.99       829
+
+    accuracy                           0.99      1642
+   macro avg       0.99      0.99      0.99      1642
+weighted avg       0.99      0.99      0.99      1642

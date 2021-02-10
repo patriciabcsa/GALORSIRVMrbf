@@ -1,0 +1,5 @@
+PERCENTIL:		0.9726708074534162
+VALIDATION:	0.9732034104750305
+INDIVIDUAL:	[0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0]
+NUMBER:		17
+FEATURE:		['Delta_F3', 'Delta_F7', 'Delta_FC5', 'Alpha_AF4', 'Alpha_F3', 'Alpha_F7', 'Alpha_F8', 'Alpha_FC5', 'Beta_AF3', 'Beta_AF4', 'Beta_F7', 'Beta_F8', 'Beta_FC5', 'Beta_T8', 'Gamma_AF3', 'Gamma_F7', 'Gamma_O2']

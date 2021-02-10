@@ -1,0 +1,9 @@
+Acuraccy_Trai_:     0.962088915956151Acuraccy_Test:         0.9135200974421437Best_param:		{'C': 10, 'gamma': 10, 'kernel': 'rbf'}Con_MatrixC:	    [[752  61]
+ [ 81 748]]Clasificacion_Reporte:		              precision    recall  f1-score   support
+
+           0       0.90      0.92      0.91       813
+           1       0.92      0.90      0.91       829
+
+    accuracy                           0.91      1642
+   macro avg       0.91      0.91      0.91      1642
+weighted avg       0.91      0.91      0.91      1642

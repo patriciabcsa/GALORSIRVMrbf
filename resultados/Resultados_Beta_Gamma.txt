@@ -1,0 +1,1 @@
+PERCENTIL:		0.8946236559139785VALIDATION:	0.9013398294762485INDIVIDUAL:	[1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0]NUMBER:		7FEATURE:		['Gamma_T8', 'Beta_F7', 'Beta_F8', 'Beta_FC5', 'Beta_P8', 'Gamma_AF4', 'Gamma_F8']
