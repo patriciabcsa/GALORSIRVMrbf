@@ -35,16 +35,7 @@ tiempo_inicial = time()
 #dfData = pd.read_csv('BD/BD_DEAP/DEAP_valence.csv')
 dfData = pd.read_csv('BD/BD_DEAP/pruebaDEAP.csv')
 dfData=dfData[dfData['user']==1]
-'''
-z = np.abs(stats.zscore(dfData))
-dfData=dfData[(z<3).all(axis=1)]
 
-Q1 = dfData.quantile(0.25)
-Q3 = dfData.quantile(0.75)
-IQR = Q3 - Q1
-
-dfData = dfData[~((dfData < (Q1 - 1.5 * IQR)) |(dfData > (Q3 + 1.5 * IQR))).any(axis=1)]
-'''
 le = LabelEncoder()
 le.fit(dfData['arousal'])
 Y = le.transform(dfData['arousal'])#etiqueta
@@ -62,24 +53,8 @@ X = pd.DataFrame(X, columns=x)
 scaler = preprocessing.StandardScaler()
 X = scaler.fit_transform(dfData)
 
-
-'''
-columnas = X.columns
-new_set=[0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0]
-x=[x for x, j in zip(columnas, new_set) if j == 1]
-X = pd.DataFrame(X, columns=x)
-scaler = MinMaxScaler()
-X = scaler.fit_transform(dfData)
-'''
-#scaler = preprocessing.StandardScaler()
-#X = scaler.fit_transform(X)
-
-#k_range = list(range(10, 20))
-#param_grid = dict(n_neighbors=k_range)
 clf = KNeighborsClassifier(n_neighbors=2) ##############################################################################################################
 skfold = StratifiedKFold(n_splits=5,shuffle=True)
-#grid = GridSearchCV(clf, cv=skfold, scoring='accuracy')
-#grid.fit(X, Y)
 
 
 cv_scores = cross_validate(clf, X, Y, cv=skfold,scoring='accuracy')

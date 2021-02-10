@@ -27,10 +27,8 @@ import scikitplot as skplt
 
 #load data
 dfData = pd.read_csv('BD/BD_SEED/s1.csv')
-dfData = dfData[dfData.label != 1] # este quita las etiqueta de los elementos neutrales
+dfData = dfData[dfData.label != 1] 
 
-# Encode the classification labels to numbers
-# Get classes and one hot encoded feature vectors
 le = LabelEncoder()
 
 le.fit(dfData['label'])

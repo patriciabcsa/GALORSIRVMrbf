@@ -19,14 +19,7 @@ from sklearn.feature_selection import SelectKBest
 from sklearn.model_selection import train_test_split
 from matplotlib import pyplot
 # load data
-'''
-dfData = pd.read_csv('BD/BD_SEED.csv')
-le = LabelEncoder()
-le.fit(dfData['PRUEBA-NOON0-NIGHT1'])
-Y = le.transform(dfData['PRUEBA-NOON0-NIGHT1'])
-X = dfData.drop(['Sujeto','PRUEBA-NOON0-NIGHT1'], axis=1)
-X=StandardScaler().fit_transform(X)
-'''
+
 #dfData = pd.read_csv('BD/BD_conductores/BD_Bandas.csv')	                #1subset
 #dfData = pd.read_csv('BD/BD_conductores/alpha.csv')					#2subset
 #fData = pd.read_csv('BD/BD_conductores/Beta_Gamma.csv')				#3subset

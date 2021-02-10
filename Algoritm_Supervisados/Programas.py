@@ -35,7 +35,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_
 
 
 
-
 def svc_param_selection_rbf(X, y, nfolds,X_t,y_t):
     Cs = [ 0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000]  #Cs = [0.001, 0.01, 0.1, 1, 10]
     gammas = [ 0.00001,0.0001,0.001, 0.01, 0.1] #gammas = [0.001, 0.01, 0.1, 1]
@@ -55,15 +54,8 @@ def svc_param_selection_rbf(X, y, nfolds,X_t,y_t):
     return scr,results,clasificacion,lin_svm_test
 
 def svc_param_selection_lineal(X, y, nfolds,X_t,y_t):
-    #Cs = [0.0001, 0.001, 0.01, 0.1, 1, 10, 100,10e5]  
-    #kernels=['linear']
-    #gammas = [0.1,0.01]
-    #param_grid = {'C': Cs,'kernel':kernels, 'gamma':gammas}
-    #clf = GridSearchCV(svm.SVC(kernels), param_grid, cv=nfolds)
-    #clf = SVC(gamma=5)
     clf = SVC(gamma='auto')
     clf.fit(X, y)
- 
     predict=clf.predict(X_t)
     results = confusion_matrix(y_t, predict) 
     scr=clf.score(X, y)
@@ -73,23 +65,10 @@ def svc_param_selection_lineal(X, y, nfolds,X_t,y_t):
 
 def knn_param_selection(X,y,nfolds,X_t,y_t):
 
-    #k_range = list(range(1,3))
-    """
-    #weight_options = ["uniform", "distance"]
-    #metric=['euclidean','manhattan']
-    #param_grid = dict(n_neighbors = k_range, weights = weight_options, metrics=metric)
-    """
-    #param_grid = dict(n_neighbors = k_range)
-    #knn = KNeighborsClassifier()
-    #clf = GridSearchCV(knn, param_grid)
     clf = KNeighborsClassifier(n_neighbors=2)
     clf.fit(X,y)
     predict=clf.predict(X_t)
-    
     results = confusion_matrix(y_t, predict) 
-    #clf.best_params_
-    #clf.best_estimator_
-    #clf.best_score_,
     scr=clf.score(X, y)
     clasificacion=classification_report(y_t, predict)
     knn_test = clf.score(X_t, y_t)
@@ -128,33 +107,25 @@ SVC_lineal,SVC_lineal_cm,clasificacionl,lin_svm_testlineal=svc_param_selection_l
 k_NN,k_NN_cm,clasificacionknn,knn_test=knn_param_selection(X_train, y_train,nfolds,X_test,y_test)
 RL_cm,clasificacionrl,RL_test=RL_param_selection(X_train, y_train,X_test,y_test)
 lin_svm_test=lin_svm_test*100
+
+
 print('\n')
-#print ("SVC_rbf         ", SVC_rbf)
 print ("SVC_rbf TEST    ",lin_svm_test)
-#print ("clasificacionrbf ",clasificacionrbf)
-#print ("SVC_rbf_par     ",SVC_rbf_par)
 print ("SVC_rbf_cm")
 print(SVC_rbf_cm)
 print()
 lin_svm_testlineal=lin_svm_testlineal*100
-#print ("SVC_lineal      ",SVC_lineal)
 print ("SVC_lineal TEST ",lin_svm_testlineal)
-#print ("clasificacionl  ",clasificacionl)
 print ("SVC_lineal_cm   ")
 print(SVC_lineal_cm)
 print()
 knn_test=knn_test*100
-#print ("k_NN            ",k_NN)
 print ("k_NN TEST        ",knn_test)
-#print ("clasificacionknn",clasificacionknn)
-#print ("k_NN_par        ",k_NN_par)
 print ("k_NN_cm         ")
 print(k_NN_cm)
 print()
 RL_test=RL_test*100
-#print ("RL              ",RL)
 print ("RL TEST         ",RL_test)
-#print ("clasificacionrl ",clasificacionrl)
 print ("RL_cm           ")
 print(RL_cm)
 print('\n')

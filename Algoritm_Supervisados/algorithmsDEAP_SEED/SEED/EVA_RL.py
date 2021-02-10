@@ -45,20 +45,11 @@ scaler = preprocessing.StandardScaler()
 X = scaler.fit_transform(X)
 
 
-# creando modelo
-#C=[0.01, 1,  100]
-#penalty=['l2']
-#hyperparametro=dict(C=C,penalty=penalty)
-#clf= LogisticRegression()
 skfold = StratifiedKFold(n_splits=5,shuffle=True)
-#grid = GridSearchCV(clf, hyperparametro, cv=skfold, scoring='accuracy')
 clf= LogisticRegression(C=.1,penalty='l1')
-#grid.fit(X, Y)
 
 cv_scores = cross_validate(clf, X, Y, cv=skfold,scoring='accuracy')
 y_pred = cross_val_predict(clf, X, Y, cv=skfold)
-
-#print(grid.best_params_)
 
 #cross_val_score
 print("\n")
